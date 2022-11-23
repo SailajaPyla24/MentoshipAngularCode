@@ -22,7 +22,7 @@
                       <input type="date" name="DateOfAdmission" required #udoa="ngModel" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" [(ngModel)]="claim.DateOfAdmission"></th>
                     </div>
                     <div class="validation" *ngIf="udoa.touched &&udoa.errors?.['pattern']">
-                      &nbsp; Date of admission  is required .
+                      Date of admission  is required.
                   </div>
                     <br>
                     <div class="form-group">
@@ -30,24 +30,24 @@
                           <input type="date" name="DateOfDischarge" required #udod="ngModel" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" [(ngModel)]="claim.DateOfDischarge"></th>
                         </div>
                         <div class="validation" *ngIf="udod.touched &&udod.errors?.['pattern']">
-                          &nbsp; Date of discharge  is required .
+                          Date of discharge  is required.
                       </div><br>
                         <div class="form-group">
                             <th>    <label for="">Provider Name</label> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
                               <input type="text" name="ProviderName" required #upn="ngModel" [(ngModel)]="claim.ProviderName"></th>
                             </div>
                             <div class="validation" *ngIf="upn.touched &&upn.errors?.['required']">
-                              &nbsp; Provider name is required .
+                             Provider name is required.
                           </div><br>
                             <div class="form-group">
                               <th>    <label for="">Bill Amount</label>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
                                 <input type="text" name="BillAmount" required pattern = "^(0|[1-9][0-9]*)$" #uamount="ngModel" [(ngModel)]="claim.BillAmount"></th>
                               </div>
                               <div class="validation" *ngIf="uamount.touched &&uamount.errors?.['required']">
-                                &nbsp;  Bill Amount is required .
+                               Bill Amount is required.
                             </div>
                               <div class="validation" *ngIf="uamount.touched &&uamount.errors?.['pattern']">
-                                  Bill Amount should be numeric only .
+                                  Bill Amount should be numeric only.
                              </div>
                                <br>
                                 

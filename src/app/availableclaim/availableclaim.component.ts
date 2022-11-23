@@ -72,7 +72,7 @@ export class AvailableclaimComponent implements OnInit {
 
 
   ngOnInit(): void {
-    debugger;
+    
     if (localStorage.getItem("Member") == null) {
       this.router.navigate(['Login']);
     }
@@ -141,6 +141,7 @@ export class AvailableclaimComponent implements OnInit {
         this.claimServiceComponent.getDependentsId(this.memid).subscribe(res => {
           this.dependents = res;
         })
+        alert('Dependent details updated successfully');
       }
     );
   }
